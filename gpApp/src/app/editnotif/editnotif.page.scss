@@ -1,0 +1,38 @@
+  // background image
+  .background-image{
+    --background: url('./../../assets/back2.png') 
+    0 0/100% 100%;
+  }
+    
+// bottom bar
+.bottomtabbar{
+    position: fixed;
+    top: 90%;
+    left: 10%;
+  }
+
+  // top bar 
+.topbarsize{
+  height: 70px;
+}
+
+  .iconposition{
+    position: fixed;
+    left: 82%;
+    top: 3%;
+  }
+
+  .ti2{
+    text-align: right; 
+  }
+  
+  .ti{
+    color:#3d3e3f;
+    position: fixed;
+    text-emphasis: justify 20px;
+    top: 20%;
+    left: 38%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}

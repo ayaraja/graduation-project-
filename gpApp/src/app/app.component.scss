@@ -1,0 +1,15 @@
+.position{
+    direction: rtl;
+}
+
+.color{
+    background-color: aqua;
+}
+
+ion-menu{
+    --ion-background-color: var(--ion-color-light);
+    --width: 200px;
+    ion-toolbar{
+        --background: var(--ion-color-light);
+    }
+}

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ RestListGroupe.category | uppercase }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let rest of RestListGroupe.favorites; let i = index">
+    <ion-card-header>
+      <p class="author">{{ rest.person }}</p>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ rest.text }}</p>
+      <p> {{ rest.time }} </p>
+      <p> {{ rest.date }} </p>
+      <p> {{ rest.typeJ }} </p>
+      <p> {{ rest.visitType }} </p>
+      <p> {{ rest.cost }} </p>
+      <p> {{ rest.location }} </p>
+
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-right>
+        <button ion-button small clear 
+        (click)="onAddToFavorite(quote)" 
+        *ngIf="!isFavorite(rest)">Favorite</button>
+        <button ion-button small clear color="danger" 
+        *ngIf="isFavorite(rest)"
+          (click)="onRemoveFromFav(rest)">Unfavorite</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

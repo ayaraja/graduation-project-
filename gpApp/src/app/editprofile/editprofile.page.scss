@@ -1,0 +1,60 @@
+  // background image
+  .background-image{
+    --background: url('./../../assets/back2.png') 
+    0 0/100% 100%;
+  }
+
+    // top bar 
+    .topbarsize{
+      height: 70px;
+    }
+  
+.ti{
+    text-align: right;
+   
+}
+    .scroll-content{ 
+        align-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        top:3%;
+        box-shadow: none;
+        background:rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .header{ 
+font-weight: bold;
+font-size: 25px;
+margin-top: 15px;
+color: #3d3e3f;
+    }
+    .bottomtabbar{
+        position: fixed;
+        top: 90%;
+        left: 3%;
+      }
+    .itmes{
+        margin: 15px;
+        padding: 20px 10px ;
+margin-bottom: 10px;
+background: rgba(255, 255, 255, 0.2);
+border: medium none;
+    }
+    
+    .iconposition{
+      position: fixed;
+      left: 82%;
+      top: 3%;
+    }
+input[type=text] , input[type=password]{
+    background:rgba(255, 255, 255, 0.3);
+    border: medium none;
+    padding: 5px 20px ;
+    color: black;
+    margin: 5px;
+    margin-bottom: 10px;    
+
+        } 

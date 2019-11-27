@@ -1,0 +1,67 @@
+.button{
+  position: relative;
+  left: 120px;
+}
+.titl{
+  position: relative;
+  left: 100px;
+}
+// background image
+.background-image{
+--background: url('./../../assets/back2.png') 
+  0 0/100% 100%;
+}
+
+// top bar 
+.topbarsize{
+height: 70px;
+}
+ 
+.mysetting{
+position:fixed;    
+top:40%;
+left: 28%;
+}
+
+//position of elements to right
+.position{
+direction: rtl;
+}
+
+//width
+.width{
+max-width: 100%;
+}
+.createactivitybtn{
+position: relative;
+left: 10%;
+}
+
+//back icon position 
+.backbutton{
+position: relative;
+left: 1%;
+}
+.menubutton{
+position: relative;
+right: 30%;
+}
+// bottom bar
+.bottomtabbar{
+position: fixed;
+top: 90%;
+left: 10%;
+}
+
+.iconposition{
+position: fixed;
+left: 60%;
+top: 3%;
+}
+.ti{
+  position: fixed;
+  text-emphasis: justify 20px;
+  top: 15%;
+  left: 40%;
+  text-align: center;
+}

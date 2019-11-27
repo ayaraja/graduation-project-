@@ -1,0 +1,61 @@
+.welcome-card img {
+    max-height: 35vh;
+    overflow: hidden;
+  }
+
+// background image
+.background-image{
+    --background: url('./../../assets/back2.png') 
+    0 0/100% 100%;
+  }
+
+.iconposition{
+    position: fixed;
+    left: 60%;
+    top: 3%;
+}
+
+.ti{
+    text-align: right; 
+}
+
+.scroll-content{ 
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+    box-shadow: none;
+    background:rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.header{ 
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 15px;
+    color: #3d3e3f;
+}
+
+.itmes{
+    margin: 0px;
+    padding: 20px 2px ;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: medium none;
+}
+    
+input[type=text] , input[type=password]{
+    background:rgba(255, 255, 255, 0.3);
+    border: medium none;
+    padding: 5px 10px ;
+    color: black;
+    margin: 5px;
+    margin-bottom: 10px;    
+} 
+.radio{
+background-color: transparent;
+// color: #3d3e3f;
+color:none;
+size:small;
+}

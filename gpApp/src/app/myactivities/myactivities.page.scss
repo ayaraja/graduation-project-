@@ -1,0 +1,53 @@
+  // background image
+  .background-image{
+    --background: url('./../../assets/back2.png') 
+    0 0/100% 100%;
+  }
+  
+.mysetting{
+    position:fixed;    
+    top:40%;
+    left: 35%;
+}
+
+  // bottom bar
+  .bottomtabbar{
+    position: fixed;
+    top: 92%;
+    width: 375px;
+    height: 70px;
+  }
+
+  .scroll-content{ 
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    box-shadow: none;
+    background:rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 60px;
+  }
+  
+  .favbtnpos{
+    position: relative;
+    left: 27%;
+  }
+
+  // top bar 
+  .topbarsize{
+    height: 70px;
+  }
+
+  
+  .ti{
+      color:#3d3e3f;
+      position: fixed;
+      text-emphasis: justify 20px;
+      top: 20%;
+      left: 40%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+  }

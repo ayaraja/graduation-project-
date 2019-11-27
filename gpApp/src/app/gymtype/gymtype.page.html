@@ -1,0 +1,75 @@
+<!-- top bar -->
+<ion-header>
+  <ion-toolbar class="topbarsize" color="medium">
+
+    <!-- back icon -->
+    <ion-button href="/homepage" size="small" color="Tertiary" slot="start">
+      <ion-icon color="dark" name="arrow-back"></ion-icon>
+    </ion-button>
+
+    <!-- menu icon -->
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+
+    <h3 text-center> النوادي الرياضية </h3>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+
+  <!-- search -->
+  <ion-searchbar showCancelButton="always" (ionInput)=" FilterJSONData($event) ">
+  </ion-searchbar>
+
+  <ion-card class="scroll-content">
+
+    <ion-list (click)="selectVal(item.name)" *ngFor="let item of jsonData">
+      <img class="act1"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1aX-mtz7ZDKvybOnigMM84eRZesyT1yL45HE1DmGie08mPqpO">
+      <div text-left>
+        <ion-button expand="block" color="medium" size="small">
+          {{item.name}}
+        </ion-button>
+      </div>
+    </ion-list>
+
+    <ion-list (click)="selectVal(item2.name)" *ngFor="let item2 of json2Data">
+      <img class="act1"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQanq9hCN6gOUZ6VvJ6fit_XjpKh8c60rCIRZ3ZQsTObVGfUp9S">
+      <div text-left>
+        <ion-button expand="block" color="medium" size="small">
+          {{item2.name}}
+        </ion-button>
+      </div>
+    </ion-list>
+
+
+  </ion-card>
+
+</ion-content>
+
+<!-- bottom bar-->
+<ion-footer>
+  <ion-toolbar slot="bottom" color="medium">
+
+    <ion-button slot="start" color="Tertiary" href="/myactivities">
+      <ion-icon name="list" color="dark"></ion-icon>
+      <ion-label color="dark">أنشطتي</ion-label>
+    </ion-button>
+
+    <div text-center>
+      <ion-button href="/myfavorite" color="Tertiary">
+        <ion-icon name="star" color="dark"> </ion-icon>
+        <ion-label color="dark">مفضلتي</ion-label>
+      </ion-button>
+    </div>
+
+    <ion-button slot="end" color="Tertiary" href="/homepage">
+      <ion-icon name="home" color="dark"></ion-icon>
+      <ion-label color="dark">الرئيسية</ion-label>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

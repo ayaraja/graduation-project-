@@ -1,0 +1,87 @@
+<!-- top bar -->
+<ion-header>
+  <ion-toolbar class="topbarsize" color="medium">
+
+    <!-- back icon -->
+    <ion-button href="/myactivities" size="small" color="Tertiary" slot="start">
+      <ion-icon color="dark" name="arrow-back"></ion-icon>
+    </ion-button>
+
+    <!-- menu icon -->
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+
+  <!-- search -->
+  <ion-searchbar showCancelButton="always" (ionInput)=" FilterJSONData($event) ">
+  </ion-searchbar>
+
+  <ion-card class="scroll-content">
+
+
+    <p class="ti"> الانشطة الملغاة</p>
+
+    <ion-list class="b">
+
+      <ion-item>
+        <ion-button color="Tertiary">
+          <ion-icon color="dark" name="trash"></ion-icon>
+        </ion-button>
+        <ion-button color="Tertiary">
+          <ion-icon color="dark" name="sync"></ion-icon>
+        </ion-button>
+        <ion-label text-right>مطعم الصيف الهندي</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-button color="Tertiary">
+          <ion-icon color="dark" name="trash"></ion-icon>
+        </ion-button>
+        <ion-button color="Tertiary">
+          <ion-icon color="dark" name="sync"></ion-icon>
+        </ion-button>
+        <ion-label text-right>غرناطة مول</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-button color="Tertiary">
+          <ion-icon color="dark" name="trash"></ion-icon>
+        </ion-button>
+        <ion-button color="Tertiary">
+          <ion-icon color="dark" name="sync"></ion-icon>
+        </ion-button>
+        <ion-label text-right>فعالية مذاق الطريق </ion-label>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-card>
+
+</ion-content>
+
+<!-- bottom bar-->
+<ion-footer>
+  <ion-toolbar slot="bottom" color="medium">
+
+    <ion-button slot="start" color="Tertiary" href="/myactivities">
+      <ion-icon name="list" color="dark"></ion-icon>
+      <ion-label color="dark">أنشطتي</ion-label>
+    </ion-button>
+
+    <div text-center>
+      <ion-button href="/myfavorite" color="Tertiary">
+        <ion-icon name="star" color="dark"> </ion-icon>
+        <ion-label color="dark">مفضلتي</ion-label>
+      </ion-button>
+    </div>
+
+    <ion-button slot="end" color="Tertiary" href="/homepage">
+      <ion-icon name="home" color="dark"></ion-icon>
+      <ion-label color="dark">الرئيسية</ion-label>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

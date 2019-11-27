@@ -1,0 +1,87 @@
+<!-- top bar -->
+<ion-header>
+  <ion-toolbar class="topbarsize" color="medium">
+
+    <!-- back icon -->
+    <ion-button href="/malls" size="small" color="Tertiary" slot="start">
+      <ion-icon color="dark" name="arrow-back"></ion-icon>
+    </ion-button>
+
+    <!-- menu icon -->
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+
+    <h3 text-center> {{ mall.name }} </h3>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+
+  <!-- search -->
+  <ion-searchbar showCancelButton="always" (ionInput)=" FilterJSONData($event) ">
+  </ion-searchbar>
+
+  <ion-card class="scroll-content">
+
+    <ion-list>
+ 
+   
+      <ion-item-sliding >
+
+        <ion-item>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+          الاسم:  {{ mall.name }}
+          </ion-label>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label> 
+          وقت الافتتاح:  {{ mall.Time_start }}
+          </ion-label>
+        </ion-item>
+          <br>
+          <ion-item>
+          <ion-label>
+             وقت الاغلاق :{{ mall.Time_end }}
+          </ion-label>
+        </ion-item>
+   
+      </ion-item-sliding>
+   
+    </ion-list>
+
+  </ion-card>
+  <ion-img [src]="mall.img"></ion-img> 
+<ion-button size="small" color="medium" (click)="open()">
+    <ion-icon name="chatboxes"></ion-icon>
+  </ion-button>
+
+</ion-content>
+
+<!-- bottom bar-->
+<ion-footer>
+  <ion-toolbar slot="bottom" color="medium">
+
+    <ion-button slot="start" color="Tertiary" href="/myactivities">
+      <ion-icon name="list" color="dark"></ion-icon>
+      <ion-label color="dark">أنشطتي</ion-label>
+    </ion-button>
+
+    <div text-center>
+      <ion-button href="/myfavorite" color="Tertiary">
+        <ion-icon name="star" color="dark"> </ion-icon>
+        <ion-label color="dark">مفضلتي</ion-label>
+      </ion-button>
+    </div>
+
+    <ion-button slot="end" color="Tertiary" href="/homepage">
+      <ion-icon name="home" color="dark"></ion-icon>
+      <ion-label color="dark">الرئيسية</ion-label>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,63 @@
+  // menu icon
+  .iconMenuposition{
+    position: fixed;
+    left: 80%;
+    top: 25%;
+  }
+
+  // search icon
+  .iconSearchposition{
+    position: fixed;
+    left: 83%;
+    top: 25%;
+  }
+
+  // back icon
+  .backIconposition{
+    position: fixed;
+    top: 25%;
+  }
+
+  .right{
+    text-align: right;
+  }
+
+
+.titl{
+    position: relative;
+    left: 100px;
+  }
+  
+  .d {
+    position: relative;
+    left: 190px;
+  }
+  .b{
+    background-color: transparent;
+  
+  }
+ // background image
+ .background-image{
+  --background: url('C:/wamp64/www/project/gpApp/src/assets/back2.png')  
+  0 0/100% 100%;
+}
+  
+.mysetting{
+  position:fixed;    
+  top:40%;
+  left: 28%;
+}
+
+
+.iconposition{
+  position: fixed;
+  left: 60%;
+  top: 3%;
+}
+.ti{
+    position: fixed;
+    text-emphasis: justify 20px;
+    top: 15%;
+    left: 40%;
+    text-align: center;
+}

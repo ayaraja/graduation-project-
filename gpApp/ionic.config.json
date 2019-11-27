@@ -1,0 +1,7 @@
+{
+  "name": "gpApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

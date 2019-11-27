@@ -1,0 +1,18 @@
+  // background image
+  .background-image{
+    --background: url('./../../assets/back2.png') 
+    0 0/100% 100%;
+  }
+  
+  // top bar 
+  .iconposition{
+    position: fixed;
+    left: 65%;
+    top: 3%;
+  }
+
+  // images size
+  .act1{
+    width: 400px;
+    height: 160px;
+  }

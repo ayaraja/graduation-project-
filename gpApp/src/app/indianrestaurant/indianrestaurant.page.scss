@@ -1,0 +1,48 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+// background image
+.background-image{
+--background: url(    'C:/wamp64/www/project/gpApp/src/assets/back2.png') 
+0 0/100% 100%;
+}
+ 
+// bottom bar
+.bottomtabbar{
+position: fixed;
+top: 92%;
+width: 375px;
+height: 70px;
+}
+
+.favbtnpos{
+position: relative;
+left: 27%;
+}
+
+// top bar 
+
+.topbarsize{
+height: 70px;
+}
+
+
+.scroll-content{ 
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  box-shadow: none;
+  background:rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 60px;
+}
+
+// images size
+.act1{
+  width: 400px;
+  height: 160px;
+}
