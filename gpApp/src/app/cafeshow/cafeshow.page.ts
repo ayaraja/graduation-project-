@@ -8,7 +8,7 @@ import{rate,RateService}from'../services/rate.service';
 import { observable } from 'rxjs';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { AngularFirestore,AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore,AngularFirestoreCollection,AngularFirestoreDocument } from 'angularfire2/firestore';
 import { AngularFireAuth } from '@angular/fire/auth'
 export interface rate{
   id?:string;
@@ -138,8 +138,8 @@ async loadTodo() {
     this.afAuth.authState.subscribe(user => {
         console.log(user.uid);
         if(user.uid){
-          const collection: AngularFirestoreCollection<Item> = this.aft.collection('favorites');
-          collection.add({org_id:this.cafe.uid,'user_id':this.user.uid})
+          const collection: AngularFirestoreCollection<any> = this.aft.collection('favorites');
+          collection.add({org_id:this.cafe.uid,'user_id':user.uid})
           .then(res => {console.log(res)}, err => reject(err));
       }
     });
