@@ -137,9 +137,11 @@ async loadTodo() {
 
     this.afAuth.authState.subscribe(user => {
         console.log(user.uid);
-        const collection: AngularFirestoreCollection<Item> = this.aft.collection('favorites');
-        collection.add({org_id:this.cafe.uid,'user_id':this.user.uid})
-        .then(res => {console.log(res)}, err => reject(err));
+        if(user.uid){
+          const collection: AngularFirestoreCollection<Item> = this.aft.collection('favorites');
+          collection.add({org_id:this.cafe.uid,'user_id':this.user.uid})
+          .then(res => {console.log(res)}, err => reject(err));
+      }
     });
 
 
