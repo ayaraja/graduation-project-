@@ -27,23 +27,22 @@
     position: relative;
     left: 100px;
   }
-  
+
   .d {
     position: relative;
     left: 190px;
   }
   .b{
     background-color: transparent;
-  
+
   }
  // background image
  .background-image{
-  --background: url('C:/wamp64/www/project/gpApp/src/assets/back2.png')  
-  0 0/100% 100%;
+  //--background: url('C:/wamp64/www/project/gpApp/src/assets/back2.png')    0 0/100% 100%;
 }
-  
+
 .mysetting{
-  position:fixed;    
+  position:fixed;
   top:40%;
   left: 28%;
 }

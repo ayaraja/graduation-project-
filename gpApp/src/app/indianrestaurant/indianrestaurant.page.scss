@@ -5,10 +5,9 @@
 
 // background image
 .background-image{
---background: url(    'C:/wamp64/www/project/gpApp/src/assets/back2.png') 
-0 0/100% 100%;
+//--background: url(    'C:/wamp64/www/project/gpApp/src/assets/back2.png') 0 0/100% 100%;
 }
- 
+
 // bottom bar
 .bottomtabbar{
 position: fixed;
@@ -22,14 +21,14 @@ position: relative;
 left: 27%;
 }
 
-// top bar 
+// top bar
 
 .topbarsize{
 height: 70px;
 }
 
 
-.scroll-content{ 
+.scroll-content{
   align-content: center;
   text-align: center;
   display: flex;
