@@ -36,6 +36,7 @@ constructor(private route: ActivatedRoute, private nav: NavController, private g
   FilterJSONData(ev:any){
     this.initializeJSONData();
     const val = ev.target.value;
+    
     if(val && val.trim() !=''){
       this.jsonData = this.jsonData.filter((item: { name: { toLowerCase: () => { indexOf: (arg0: any) => number; }; }; }) =>{
         return( item.name.toLowerCase().indexOf(val.toLowerCase())>-1);

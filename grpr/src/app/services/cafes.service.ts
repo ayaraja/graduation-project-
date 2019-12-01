@@ -7,6 +7,8 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 
 export interface cafes {
+  [x: string]: any;
+  uid: any;
   id?: string;
   name:string;
   type_place:string;
