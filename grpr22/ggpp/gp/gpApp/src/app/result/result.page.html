@@ -1,0 +1,21 @@
+<ion-button class="backbutton" href="/homepage" size="small" color="Tertiary">
+  <ion-icon color="dark" name="arrow-back"></ion-icon>
+</ion-button>
+<ion-content overflow="auto">
+
+  <h5>Size</h5>
+   <ion-list>
+     <div *ngIf="productID | async; let productID; else loading">
+       <ul>
+         <li *ngFor="let item of productID">
+           {{ item.name }}
+         </li>
+       </ul>
+       <div *ngIf="item.length === 0">No results, try clearing filters</div>
+     </div>
+     <ng-template #loading>Loading&hellip;</ng-template>
+     
+   </ion-list>
+
+    <button (click)="openDetailsWithQueryParams()">الخيار   </button>
+  </ion-content>

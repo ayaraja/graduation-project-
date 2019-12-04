@@ -1,0 +1,110 @@
+<ion-content class="background-image">
+  <ion-header>
+    <ion-toolbar color="Tertiary">
+      <ion-button icon-only href="/home" color="Tertiary">
+        <ion-icon color="dark" size="small" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="scroll-content">
+    <ion-card-header class="header">
+      تسجيل
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list class="itmes">
+          <ion-list>
+  
+              <!-- <ion-item>
+              <ion-label position="floating">Username</ion-label>
+              <ion-input type="text" [(ngModel)]="username"></ion-input>
+              </ion-item> -->
+              
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" [(ngModel)]="email"></ion-input>
+                </ion-item>
+            
+              <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password"></ion-input>
+              </ion-item>
+        
+              <ion-item>
+              <ion-label position="floating">Confirm Password</ion-label>
+              <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+              </ion-item>
+            
+            </ion-list>
+            
+
+
+
+        <ion-item color="Tertiary" dir="rtl">
+          <ion-toggle [(ngModel)]="hide" size="small" color="primary" text-right></ion-toggle>
+          <ion-label text-left> تفعيل الاشعارات </ion-label>
+        </ion-item>
+
+
+        <p *ngIf="hide" dir="rtl">
+
+          <ion-list class="radio">
+            <ion-radio-group [(ngModel)]="activities">
+
+              <ion-item color="Tertiarys" text-right>
+                <ion-label>فعاليات</ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','فعاليات')" value="فعاليات"></ion-radio>
+              </ion-item>
+
+
+              <ion-item color="Tertiarys" text-right>
+                <ion-label>أزياء</ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','أزياء')" value="أزياء"></ion-radio>
+              </ion-item>
+
+
+              <ion-item color="Tertiarys" text-right>
+                <ion-label>فنون وثقافة</ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','فنون وثقافة')" value="فنون وثقافة"></ion-radio>
+              </ion-item>
+
+              <ion-item color="Tertiarys" text-right>
+                <ion-label>العاب</ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','العاب')" value="العاب"></ion-radio>
+              </ion-item>
+
+              <ion-item color="Tertiarys" text-right>
+                <ion-label>تراثي</ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','تراثي')" value="تراثي"></ion-radio>
+              </ion-item>
+
+              <ion-item color="Tertiarys" text-right>
+                <ion-label>كرنفال </ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','كرنفال ')" value="كرنفال "></ion-radio>
+              </ion-item>
+              
+              <ion-item color="Tertiarys" text-right>
+                <ion-label> (الخطة (تنبهني عند افتراب موعد الخطة</ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','فنون وثقافة (الخطة (تنبهني عند افتراب موعد الخطة')"
+                  value=" (الخطة (تنبهني عند افتراب موعد الخطة"></ion-radio>
+              </ion-item>
+
+              <ion-item color="Tertiarys" text-right>
+                <ion-label>لاحقا</ion-label>
+                <ion-radio (ionSelect)="optionSelected('activities','لاحقا')" value="لاحقا"></ion-radio>
+              </ion-item>
+
+
+            </ion-radio-group>
+
+          </ion-list>
+        </p>
+
+
+        <ion-button (click)="register()" color="medium" shape="round">تسجيل </ion-button>
+
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

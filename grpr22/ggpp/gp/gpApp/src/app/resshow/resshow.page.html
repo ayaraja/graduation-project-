@@ -1,0 +1,125 @@
+<!-- top bar -->
+<ion-header>
+    <ion-toolbar class="topbarsize" color="medium">
+  
+      <!-- back icon -->
+      <ion-back-button  size="small" color="Tertiary" slot="start" defaultHref="/home">   <ion-icon color="dark" name="arrow-back"></ion-icon></ion-back-button>
+
+      <!-- menu icon -->
+      <ion-buttons slot="end">
+        <ion-menu-button color="dark"></ion-menu-button>
+      </ion-buttons>
+  
+      <h3 text-center>{{ data.name }} </h3>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="background-image">
+  
+    <!-- search -->
+    <ion-searchbar showCancelButton="always" (ionInput)=" FilterJSONData($event) ">
+    </ion-searchbar>
+  
+    <ion-card class="scroll-content">
+  
+      <ion-list>
+   
+     
+        <ion-item-sliding >
+  
+         
+          <ion-item>
+            <ion-label align="right">
+            الاسم:  {{ data.name }}
+            </ion-label>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label align="right"> 
+           نوع الجلسة:  {{ data.type_j }},{{ data.type_j1 }}
+            </ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-label  align="right"> 
+            الفئة:  {{ data.vistor_Type}},{{ data.vistor_Type1 }}
+              </ion-label>
+            </ion-item>
+            <ion-item> 
+            <ion-label align="right"> 
+            وقت الافتتاح:  {{ data.Time_start }}
+            </ion-label>
+          </ion-item>
+            <br>
+            <ion-item >
+            <ion-label align="right">
+               وقت الاغلاق :{{ data.Time_end }}
+            </ion-label>
+          </ion-item>
+          <ion-item >
+              <ion-label align="right">
+                رقم الهاتف:{{ data.phone }}
+              </ion-label>
+            </ion-item>
+     
+        </ion-item-sliding>
+     
+      </ion-list>
+
+      <!-- <ion-list>
+          <div *ngIf="items$ | async; let items; else loading">
+            <ul>
+              <li *ngFor="let item of items">
+                 {{item.name}}
+                   
+
+              </li>
+            </ul>
+            <div *ngIf="items.length === 0">لايوجد</div>
+    
+          </div>
+          <ng-template #loading>loading&hellip;</ng-template> 
+          
+        </ion-list>  -->
+        <!-- <ion-list  >
+        <ion-item button *ngFor="let item of (items$ | async)" >
+          <ion-label text-wrap>
+            <h3>{{ item.name }}</h3>
+
+          </ion-label>
+        </ion-item>
+      </ion-list>-->
+  
+    <ion-img [src]="data.img"></ion-img> 
+    <ion-button size="small" color="medium" (click)="test(data.url)">المزيد</ion-button>
+    <ion-button size="small" color="medium" (click)="open(data.id)">
+        <ion-icon name="chatboxes"></ion-icon>
+      </ion-button>
+      <ion-button (click)="map(data.map)"></ion-button>
+      <ion-button size="small" color="medium" (click)="likeButtonClick(data.rate,data.id)">{{data.rate/10}} <ion-icon name="star-outline"></ion-icon>  </ion-button>
+    </ion-card> 
+  </ion-content>
+  
+  <!-- bottom bar-->
+  <ion-footer>
+    <ion-toolbar slot="bottom" color="medium">
+  
+      <ion-button slot="start" color="Tertiary" href="/myactivities">
+        <ion-icon name="list" color="dark"></ion-icon>
+        <ion-label color="dark">أنشطتي</ion-label>
+      </ion-button>
+  
+      <div text-center>
+        <ion-button href="/myfavorite" color="Tertiary">
+          <ion-icon name="star" color="dark"> </ion-icon>
+          <ion-label color="dark">مفضلتي</ion-label>
+        </ion-button>
+      </div>
+  
+      <ion-button slot="end" color="Tertiary" href="/homepage">
+        <ion-icon name="home" color="dark"></ion-icon>
+        <ion-label color="dark">الرئيسية</ion-label>
+      </ion-button>
+  
+    </ion-toolbar>
+  </ion-footer>

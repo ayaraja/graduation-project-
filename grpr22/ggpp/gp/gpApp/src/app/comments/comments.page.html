@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="light">
+
+    <ion-back-button  size="small" color="Tertiary" slot="start" defaultHref="/home">   <ion-icon color="dark" name="arrow-back"></ion-icon></ion-back-button>
+
+    <ion-title><h3>التعليقات</h3></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+
+
+
+<ion-list>
+    <div *ngIf="items$ | async; let items; else loading">
+      <ul>
+        <li *ngFor="let item of items">
+
+{{item.message}}
+{{item.createdAt|date:'short'}}
+        </li>
+      </ul>
+      <div *ngIf="items.length === 0">لاتوجد تعلقيات</div>
+
+    </div>
+    <ng-template #loading>تحميل&hellip;</ng-template> 
+    
+  </ion-list>
+
+
+  
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-row align-items-center no-padding>
+      <ion-col size="10">
+        <textarea autosize maxRows="4" [(ngModel)]="comments.message" class="message-input">
+        </textarea>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button  color="prrimary"  class="msg-btn"
+          (click)="savecomments()">
+          <ion-icon name="ios-send" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,66 @@
+.mysetting{
+    position:fixed;    
+    top:40%;
+    left: 28%;
+  }
+  // bottom bar
+  .bottomtabbar{
+    position: fixed;
+    top: 92%;
+    width: 375px;
+    height: 70px;
+  }
+  
+  .scroll-content{ 
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    box-shadow: none;
+    background:rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 60px;
+  }
+  
+  .favbtnpos{
+    position: relative;
+    left: 27%;
+  }
+  
+  
+    // background image
+    .background-image{
+      --background: url('./../../assets/back2.png') 
+      0 0/100% 100%;
+    }
+  
+  // top bar 
+  .topbarsize{
+    height: 70px;
+  }
+  
+  
+  // back icon
+  .backIconposition{
+    position: fixed;
+    top: 25%;
+  }
+  
+  
+  .iconposition{
+    position: fixed;
+    left: 60%;
+    top: 3%;
+  }
+  .ti{
+    color:#3d3e3f;
+    left: 38%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .titl{
+    position: relative;
+    left: 100px;
+  }

@@ -1,0 +1,37 @@
+<!-- top bar -->
+<ion-header>
+  <ion-toolbar class="topbarsize" color="medium">
+
+    <!-- back icon -->
+    <ion-button href="/settings" size="small" color="Tertiary" slot="start">
+      <ion-icon color="dark" name="arrow-back"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+
+  <ion-card class="scroll-content">
+    <ion-card-header class="header">
+      تعديل الحساب
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list class="itmes">
+        
+   
+        <p class="ti"> : البريد الالكتروني </p>
+        <input type="text" [(ngModel)]="email" aria-placeholder="البريد الالكتروني">
+        <p class="ti"> : كلمة المرور </p>
+        <input type="password" [(ngModel)]="password" aria-placeholder="كلمة المرور">
+        <p class="ti"> :تاكيد كلمة المرور </p>
+        <input type="password" [(ngModel)]="cpassword" aria-placeholder="كلمة المرور">
+      
+        <br>
+
+
+        <ion-button color="medium"  (click)="updateCustomer(email,password,cpassword)" shape="round">حفـــظ </ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
