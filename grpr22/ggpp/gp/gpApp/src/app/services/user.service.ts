@@ -8,6 +8,7 @@ interface user {
 	email:string,
 	uid: string,
 	activities:string,
+	password: string,
 }
 
 @Injectable({
@@ -34,6 +35,8 @@ private activities;
 		getUseremail(): string {
 		return this.user.email
 	}
+
+
 	getUseractivities():string{
 		return this.user.activities;
 	}
@@ -60,6 +63,7 @@ private activities;
 				email: user.email.split('@')[0],
 				uid: user.uid,
 				activities:"",
+				password:"",
 			
 			})
 
@@ -69,7 +73,6 @@ private activities;
 	}
 
 	getUID(): string {
-	
 		return this.user.uid;
 	}
 

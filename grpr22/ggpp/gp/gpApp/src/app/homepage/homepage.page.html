@@ -1,22 +1,22 @@
 <!-- home page and activity list page -->
 <!-- top bar -->
-<ion-header >
+<ion-header>
   <ion-toolbar class="topbarsize" color="medium">
 
-      <div slot="end" class="btnposition">
+    <div slot="end" class="btnposition">
 
 
-          <!-- notification icon -->
-          <ion-button href="/choosenotif" size="small" color="Tertiary">
-            <ion-icon name="notifications" color="dark"></ion-icon>
-          </ion-button>
+      <!-- notification icon -->
+      <ion-button href="/choosenotif" size="small" color="Tertiary">
+        <ion-icon name="notifications" color="dark"></ion-icon>
+      </ion-button>
 
-        </div>
+    </div>
 
-          <!-- menu icon -->
-      <ion-buttons slot="end">
-          <ion-menu-button  color="dark"></ion-menu-button>
-        </ion-buttons>
+    <!-- menu icon -->
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
@@ -24,7 +24,7 @@
 
 <ion-content class="background-image">
   <!-- search -->
-  <ion-searchbar  color="medium" (ionInput)=" FilterJSONData($event) " showCancelButton="always">
+  <ion-searchbar color="medium" (onChange)="initializeJSONData()" (ionInput)=" FilterJSONData($event) " showCancelButton="always">
   </ion-searchbar>
 
   <ion-card class="scroll-content">
@@ -63,7 +63,7 @@
       </ion-button>
     </ion-list>
 
-   
+
 
     <br>
     <div>
@@ -84,12 +84,13 @@
       <ion-label color="dark">أنشطتي</ion-label>
     </ion-button>
 
-    <div text-center >
-    <ion-button href="/myfavorite" color="Tertiary">
-      <ion-icon name="star" color="dark"> </ion-icon>
-      <ion-label color="dark">مفضلتي</ion-label>
-    </ion-button>
+    <div text-center>
+      <ion-button href="/myfavorite" color="Tertiary">
+        <ion-icon name="heart" color="dark"> </ion-icon>
+        <ion-label color="dark">مفضلتي</ion-label>
+      </ion-button>
     </div>
+
 
     <ion-button slot="end" color="Tertiary" href="/homepage">
       <ion-icon name="home" color="dark"></ion-icon>

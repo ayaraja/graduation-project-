@@ -18,7 +18,7 @@
 
 <ion-content class="background-image">
   <ion-list>
-
+ 
     <ng-container *ngIf="!fav || fav.length == 0">
       <div *ngFor="let n of [0,1,2]" padding>
         <ion-skeleton-text></ion-skeleton-text>
@@ -36,7 +36,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-button (click)="delete(item)" color="danger">
+        <ion-button (click)="delete(item.id)" color="danger">
           <ion-icon size="large" name="trash"></ion-icon>
         </ion-button>
       </ion-item-options>
@@ -80,7 +80,7 @@
 
     <div text-center>
       <ion-button href="/myfavorite" color="Tertiary">
-        <ion-icon name="star" color="dark"> </ion-icon>
+    <ion-icon name="heart" color="dark"> </ion-icon>
         <ion-label color="dark">مفضلتي</ion-label>
       </ion-button>
     </div>

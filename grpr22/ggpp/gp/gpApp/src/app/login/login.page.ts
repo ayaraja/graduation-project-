@@ -30,6 +30,7 @@ export class LoginPage implements OnInit {
 					email,
 					uid: res.user.uid,
 					activities,
+					password,
 				})
 				this.router.navigate(['/homepage'])
 			}

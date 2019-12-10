@@ -26,6 +26,9 @@ export interface rate {
 })
 export class CafeshowPage implements OnInit {
 
+  isYesClicked:boolean = false
+  isNoClicked:boolean = false
+
   cafe: cafes = {
     name: '',
     type_place: '',

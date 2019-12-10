@@ -48,6 +48,8 @@ const routes: Routes = [
   { path: 'vmlist', loadChildren: './vmlist/vmlist.module#VmlistPageModule' },
   { path: 'vmshow/:id', loadChildren: './vmshow/vmshow.module#VmshowPageModule' },
   { path: 'favdetails/:id', loadChildren: './favdetails/favdetails.module#FavdetailsPageModule' },
+  { path: 'second/:price', loadChildren: './second/second.module#SecondPageModule' },
+  { path: 'search', loadChildren: './search/search.module#SearchPageModule' },
 ];
 
 @NgModule({

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-import {PostProvider} from '../providers/post_providers';
+import { PostProvider } from '../providers/post_providers';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/Storage';
 import { UserService } from '../services/user.service';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AlertController } from '@ionic/angular';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'app-editprofile',
@@ -14,90 +15,106 @@ import { AlertController } from '@ionic/angular';
 })
 export class EditprofilePage implements OnInit {
   mainuser: AngularFirestoreDocument
-sub
+  sub
   anggota: any;
   name_customer: string;
   email: string
-	profilePic: string
+  profilePic: string
 
-	password: string
+  password: string
   newpassword: string
-  
+
   customers: any = [];
   limit: number = 13; // LIMIT GET PERDATA
   start: number = 0;
-  constructor(	private router: Router,
-  	private post: PostProvider,
+  ref: any;
+  constructor(private router: Router,
+    private post: PostProvider,
     private storage: Storage,
     public user: UserService,
     private afs: AngularFirestore,
-		private alertController: AlertController,
+    public afAuth: AngularFireAuth,
+    private alertController: AlertController,
 
     public toastCtrl: ToastController) {
     //   this.mainuser = afs.doc(`users/${user.getUID()}`)
-		// this.sub = this.mainuser.valueChanges().subscribe(event => {
-		// 	this.email = event.email
+    // this.sub = this.mainuser.valueChanges().subscribe(event => {
+    // 	this.email = event.email
     // })
-    
-     }
-     async presentAlert(title: string, content: string) {
-      const alert = await this.alertController.create({
-        header: title,
-        message: content,
-        buttons: ['OK']
-      })
-  
-      await alert.present()
-    }
+
+    const usere = this.afAuth.auth.currentUser;
+    console.log(usere)
+
+
+  }
+  async presentAlert(title: string, content: string) {
+    const alert = await this.alertController.create({
+      header: title,
+      message: content,
+      buttons: ['OK']
+    })
+
+    await alert.present()
+  }
   ngOnInit() {
   }
+
+
   // updateCustomer(email,password,cpassword){
   //   if(password!=null)
   //   if(password==cpassword)
   //   this.user.updatePassword(password);
   //   if(email!=null)
   //   this.user.updateEmail(email);
-    
+
   // }
-//   updatePassword(Password){
-// this.user.updatePassword(Password);
-//   }
-//   updateemail(email){
-// this.user.updateEmail(email);
-//   }
-ngOnDestroy() {
-  this.sub.unsubscribe()
-}
+  //   updatePassword(Password){
+  // this.user.updatePassword(Password);
+  //   }
+  //   updateemail(email){
+  // this.user.updateEmail(email);
+  //   }
+  ngOnDestroy() {
+    this.sub.unsubscribe()
+  }
 
-// async updateDetails() {
+  updatepass(newpassword) {
+    const user = this.afAuth.auth.currentUser;
 
-//   if(!this.password) {
-    
-//     return this.presentAlert('Error!', 'You have to enter a password')
-//   }
+    user.updatePassword(newpassword).then(function () {
+      console.log("updated")
+    });
+  }
 
-//   try {
-//     await this.user.reAuth(this.user.getUseremail(), this.password)
-//   } catch(error) {
-//     return this.presentAlert('Error!', 'Wrong password!')
-//   }
+  // async updateDetails() {
 
-//   if(this.newpassword) {
-//     await this.user.updatePassword(this.newpassword)
-//   }
+  //   if(!this.password) {
 
-//   if(this.email !== this.user.getUseremail()) {
-//     await this.user.updateEmail(this.email)
-//     this.mainuser.update({
-//       email: this.email
-//     })
-//   }
+  //     return this.presentAlert('Error!', 'You have to enter a password')
+  //   }
 
-//   this.password = ""
-//   this.newpassword = ""
+  //   try {
+  //     await this.user.reAuth(this.user.getUseremail(), this.password)
+  //   } catch(error) {
+  //     return this.presentAlert('Error!', 'Wrong password!')
+  //   }
 
-//   await this.presentAlert('Done!', 'Your profile was updated!')
+  //   if(this.newpassword) {
+  //     await this.user.updatePassword(this.newpassword)
+  //   }
 
-//   this.router.navigate(['/editprofile'])
-// }
+  //   if(this.email !== this.user.getUseremail()) {
+  //     await this.user.updateEmail(this.email)
+  //     this.mainuser.update({
+  //       email: this.email
+  //     })
+  //   }
+
+  //   this.password = ""
+  //   this.newpassword = ""
+
+  //   await this.presentAlert('Done!', 'Your profile was updated!')
+
+  //   this.router.navigate(['/editprofile'])
+  // }
 }

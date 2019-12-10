@@ -29,7 +29,7 @@ interface favorite {
 export class MyfavoritePage implements OnInit {
 
   fav:favorites[];
-
+ 
   
   favoritesCollection: AngularFirestoreCollection<favorite>;
   favorites: Observable<favorite[]>;
@@ -56,7 +56,8 @@ export class MyfavoritePage implements OnInit {
     // });
   }
 
-  delete(item: any){
-    this.afs.doc('favorites/$(item.id)').delete();
-  }
+  delete(id){
+    console.log(id)
+      this.getrest.removeactivity(id)  
+    }
 }

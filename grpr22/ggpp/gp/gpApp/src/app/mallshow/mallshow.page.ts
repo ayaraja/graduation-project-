@@ -21,6 +21,9 @@ export interface rate {
 })
 export class MallshowPage implements OnInit {
 
+  isYesClicked: boolean = false
+  isNoClicked: boolean = false
+
   mall: Malls = {
     name: '',
     Time_start: '',
