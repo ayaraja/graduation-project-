@@ -12,7 +12,6 @@ import { AngularFirestore } from 'angularfire2/firestore';
 })
 export class CafelistPage implements OnInit {
 
-  public searchTerm: string = "";
   public cafe: cafes[];
 
 
@@ -22,21 +21,18 @@ export class CafelistPage implements OnInit {
   constructor(private route: ActivatedRoute,
     public db: AngularFirestore,
     private getrest: CafesService, ) {
-    this.initializeJSONData();
   }
 
 
 
   FilterJSONData(ev: any) {
-    this.initializeJSONData();
     const val = ev.target.value;
-
+    console.log(val)
+    const cafes = this.db.collection("cafes", ref => ref.where("name", "==",val));
+ 
   }
 
 
-  initializeJSONData() {
-
-  }
 
 
 
@@ -49,10 +45,6 @@ export class CafelistPage implements OnInit {
   }
 
 
-  search() {
-    // this.db.collection("cafes", ref => ref.where("name", "==","test"))
-    console.log(name)
-  }
 
 
 

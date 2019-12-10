@@ -15,12 +15,12 @@
     <h3 text-center> مقاهي </h3>
 
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="FilterJSONData($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="background-image">
-
-  <!-- search -->
-  <ion-searchbar showCancelButton="always" ionChange="search()" value="searchTxt"></ion-searchbar>
 
   <ion-card class="scroll-content">
 
